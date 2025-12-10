@@ -1,4 +1,14 @@
+# 📊 **InvoiceFlow - Comprehensive Invoicing & Inventory System for SMEs**
+
+<p align="center">
+  <img src="https://via.placeholder.com/800x200?text=InvoiceFlow+Enterprise+System" alt="InvoiceFlow Banner">
+</p>
+
+## 🎯 **Description**
+
 Comprehensive enterprise system developed with microservices architecture that unifies electronic invoicing management, inventory control, automated accounting, and real-time business analytics. Designed for Colombian SMEs requiring DIAN electronic invoicing compliance, rigorous inventory control, and automated accounting processes.
+
+This project represents my experience developing complex enterprise solutions at SENNOVA/SENA, integrating multiple systems (electronic invoicing, ERP, accounting) for micro-entrepreneurs and small businesses in Colombia.
 
 ---
 
@@ -699,237 +709,6 @@ public class AccountingIntegrationService {
 
 ---
 
-## 🚀 **Installation and Setup**
-
-### **Prerequisites**
-
-```bash
-Backend:
-- Java 17+
-- Maven 3.8+
-- PostgreSQL 15+
-- MongoDB 6+
-- Redis 7+
-- Kafka 3.x
-
-Frontend:
-- Node.js 18+
-- npm 9+
-- Angular CLI 17+
-
-Infrastructure:
-- Docker & Docker Compose
-- Kubernetes (optional, production)
-```
-
-### **Backend Configuration**
-
-**1. Clone repository**
-```bash
-# Source code private (SENA)
-# Contact for access: paula@paulabad.tech
-```
-
-**2. Configure databases**
-
-```yaml
-# docker-compose.yml
-version: '3.8'
-services:
-  postgres:
-    image: postgres:15
-    environment:
-      POSTGRES_DB: invoiceflow
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: secret
-    ports:
-      - "5432:5432"
-  
-  mongodb:
-    image: mongo:6
-    ports:
-      - "27017:27017"
-  
-  redis:
-    image: redis:7
-    ports:
-      - "6379:6379"
-  
-  kafka:
-    image: confluentinc/cp-kafka:7.5.0
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-```
-
-**3. Configure microservices**
-
-```properties
-# application-prod.yml
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/invoiceflow
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
-  
-  kafka:
-    bootstrap-servers: localhost:9092
-    consumer:
-      group-id: invoiceflow-group
-  
-  redis:
-    host: localhost
-    port: 6379
-
-# DIAN Configuration
-dian:
-  api:
-    url: https://vpfe.dian.gov.co/WcfDianCustomerServices.svc
-    nit: ${COMPANY_NIT}
-    certificate:
-      path: ${CERT_PATH}
-      password: ${CERT_PASSWORD}
-    test-mode: false
-
-# Siigo Integration
-siigo:
-  api:
-    url: https://api.siigo.com
-    username: ${SIIGO_USER}
-    access-key: ${SIIGO_KEY}
-```
-
-**4. Run microservices**
-
-```bash
-# Start Eureka Server
-cd eureka-server && mvn spring-boot:run
-
-# Start Config Server
-cd config-server && mvn spring-boot:run
-
-# Start Gateway
-cd api-gateway && mvn spring-boot:run
-
-# Start services
-cd products-service && mvn spring-boot:run
-cd invoices-service && mvn spring-boot:run
-cd clients-service && mvn spring-boot:run
-cd accounting-service && mvn spring-boot:run
-```
-
-### **Frontend Configuration (Angular)**
-
-**1. Install dependencies**
-
-```bash
-cd frontend-angular
-npm install
-```
-
-**2. Configure environment**
-
-```typescript
-// src/environments/environment.prod.ts
-export const environment = {
-  production: true,
-  apiUrl: 'https://api.invoiceflow.com',
-  wsUrl: 'wss://api.invoiceflow.com',
-  dianEnabled: true,
-  features: {
-    realTimeUpdates: true,
-    accountingSync: true,
-    multiWarehouse: true
-  }
-};
-```
-
-**3. Run development**
-
-```bash
-ng serve --open
-```
-
-**4. Production build**
-
-```bash
-ng build --configuration production
-```
-
----
-
-## 📋 **Main API Endpoints**
-
-### **Authentication**
-```http
-POST   /api/auth/login
-POST   /api/auth/register
-POST   /api/auth/refresh
-POST   /api/auth/logout
-```
-
-### **Products and Inventory**
-```http
-GET    /api/products                    # List products
-POST   /api/products                    # Create product
-PUT    /api/products/{id}               # Update product
-DELETE /api/products/{id}               # Delete product
-GET    /api/products/low-stock          # Low stock products
-POST   /api/products/{id}/stock         # Adjust stock
-GET    /api/products/{id}/movements     # Movement history
-GET    /api/products/valuation          # Inventory valuation
-```
-
-### **Clients**
-```http
-GET    /api/clients                     # List clients
-POST   /api/clients                     # Create client
-GET    /api/clients/{id}/invoices       # Invoice history
-GET    /api/clients/{id}/balance        # Client balance
-```
-
-### **Invoices**
-```http
-POST   /api/invoices                    # Create invoice
-GET    /api/invoices/{id}               # Get invoice
-GET    /api/invoices/{id}/pdf           # Download PDF
-POST   /api/invoices/{id}/send-dian     # Send to DIAN
-GET    /api/invoices/{id}/dian-status   # DIAN status
-POST   /api/invoices/{id}/credit-note   # Create credit note
-GET    /api/invoices/pending            # Pending invoices
-```
-
-### **Accounting**
-```http
-GET    /api/accounting/entries          # Accounting entries
-POST   /api/accounting/entries          # Create entry
-GET    /api/accounting/balance-sheet    # Balance sheet
-GET    /api/accounting/income-statement # Income statement
-POST   /api/accounting/sync-siigo       # Sync with Siigo
-```
-
-### **Dashboard and Reports**
-```http
-GET    /api/dashboard/metrics           # Main KPIs
-GET    /api/dashboard/sales-chart       # Sales chart data
-GET    /api/dashboard/inventory-chart   # Inventory data
-GET    /api/reports/sales               # Sales report
-GET    /api/reports/inventory           # Inventory report
-GET    /api/reports/dian                # DIAN reports (2275, 2276)
-```
-
-### **WebSocket Events**
-```javascript
-// Real-time events
-socket.on('sales-update', (data) => {});
-socket.on('inventory-alert', (data) => {});
-socket.on('dian-response', (data) => {});
-socket.on('low-stock-warning', (data) => {});
-```
-
----
-
 ## 🧪 **Testing**
 
 ### **Backend - JUnit & Mockito**
@@ -1225,6 +1004,19 @@ This system has been implemented in **15+ Colombian micro-enterprises** through 
 
 ---
 
+## 📞 **Contact and Collaboration**
+
+**Paula Abad**  
+Full Stack Developer | Backend Java/Spring Boot | Frontend Angular  
+Electronic Invoicing Specialist & DIAN Integration
+
+- 💼 [LinkedIn](https://linkedin.com/in/your-profile)
+- 💻 [GitHub](https://github.com/paulabadt)
+- 🌐 [Portfolio](https://paulabad.tech)
+- 📧 paula@paulabad.tech
+
+---
+
 ## 📄 **License and Intellectual Property**
 
 This project was developed as part of my work at **SENA - SENNOVA** to support Colombian micro-entrepreneurs. The source code is property of the institution and is not publicly available.
@@ -1235,3 +1027,10 @@ This project was developed as part of my work at **SENA - SENNOVA** to support C
 - ✅ Additional module development
 - ✅ Technical support and integration
 
+---
+
+## 🏆 **Recognition**
+
+- 🥇 **Best Innovation Project** - SENA Regional Risaralda 2023
+- 🏅 **DIAN Certification** - Validated system for electronic invoicing
+- ⭐ **15+ successful implementations** in micro-enterprises
