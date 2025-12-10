@@ -1,4 +1,5 @@
-Es un sistema empresarial integral desarrollado con arquitectura de microservicios que unifica la gestión de facturación electrónica, control de inventario, contabilidad automatizada y análisis de negocio en tiempo real. Diseñado específicamente para pequeñas y medianas empresas (PYMES) colombianas que requieren cumplir con las normativas de facturación electrónica de la DIAN, mantener un control riguroso de sus inventarios y automatizar sus procesos contables.
+Es un sistema empresarial integral desarrollado con arquitectura de microservicios que unifica la gestión de facturación electrónica, control de inventario, contabilidad automatizada y análisis de negocio en tiempo real. Diseñado específicamente para pequeñas y medianas empresas (PYMES) colombianas que requieren cumplir con las normativas de facturación electrónica de la DIAN, mnatener un control rigoroso de sus inventarios y automaticas sus procesos contables.
+
 ---
 
 ## 🛠️ **Stack Tecnológico Completo**
