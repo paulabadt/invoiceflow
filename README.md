@@ -1,65 +1,65 @@
-Es un sistema empresarial integral desarrollado con arquitectura de microservicios que unifica la gestión de facturación electrónica, control de inventario, contabilidad automatizada y análisis de negocio en tiempo real. Diseñado específicamente para pequeñas y medianas empresas (PYMES) colombianas que requieren cumplir con las normativas de facturación electrónica de la DIAN, mnatener un control rigoroso de sus inventarios y automaticas sus procesos contables.
+Comprehensive enterprise system developed with microservices architecture that unifies electronic invoicing management, inventory control, automated accounting, and real-time business analytics. Designed for Colombian SMEs requiring DIAN electronic invoicing compliance, rigorous inventory control, and automated accounting processes.
 
 ---
 
-## 🛠️ **Stack Tecnológico Completo**
+## 🛠️ **Complete Technology Stack**
 
-### **Backend - Microservicios**
+### **Backend - Microservices**
 
-| Tecnología | Versión | Uso |
+| Technology | Version | Use |
 |------------|---------|-----|
-| **Java** | 17 | Backend principal |
-| **Spring Boot** | 3.2.x | Framework microservicios |
-| **Spring Cloud** | 2023.x | Arquitectura distribuida |
+| **Java** | 17 | Main backend |
+| **Spring Boot** | 3.2.x | Microservices framework |
+| **Spring Cloud** | 2023.x | Distributed architecture |
 | **Spring Cloud Gateway** | - | API Gateway |
 | **Eureka Server** | - | Service Discovery |
-| **Spring Cloud Config** | - | Configuración centralizada |
-| **Spring Data JPA** | - | Persistencia |
-| **Spring Security** | - | Autenticación/Autorización |
+| **Spring Cloud Config** | - | Centralized configuration |
+| **Spring Data JPA** | - | Persistence |
+| **Spring Security** | - | Authentication/Authorization |
 | **Resilience4j** | - | Circuit Breaker, Rate Limiting |
-| **Kafka** | 3.x | Mensajería asíncrona |
-| **PostgreSQL** | 15+ | Base de datos principal |
-| **MongoDB** | 6.x | Logs y documentos |
-| **Redis** | 7.x | Cache distribuido |
+| **Kafka** | 3.x | Asynchronous messaging |
+| **PostgreSQL** | 15+ | Main database |
+| **MongoDB** | 6.x | Logs and documents |
+| **Redis** | 7.x | Distributed cache |
 
 ### **Frontend - Single Page Application**
 
-| Tecnología | Versión | Uso |
+| Technology | Version | Use |
 |------------|---------|-----|
-| **Angular** | 17 | Framework frontend |
-| **TypeScript** | 5.x | Lenguaje principal |
-| **RxJS** | 7.x | Programación reactiva |
+| **Angular** | 17 | Frontend framework |
+| **TypeScript** | 5.x | Main language |
+| **RxJS** | 7.x | Reactive programming |
 | **NgRx** | 17.x | State management |
-| **Angular Material** | 17.x | Componentes UI |
-| **Chart.js** | 4.x | Gráficas y reportes |
-| **Socket.io Client** | 4.x | WebSockets tiempo real |
+| **Angular Material** | 17.x | UI components |
+| **Chart.js** | 4.x | Charts and reports |
+| **Socket.io Client** | 4.x | Real-time WebSockets |
 
-### **Integraciones Externas**
+### **External Integrations**
 
-| Sistema | Uso |
-|---------|-----|
-| **DIAN Web Services** | Facturación electrónica oficial |
-| **DIAN RADIAN** | Eventos de factura electrónica |
-| **Siigo API** | Integración contable |
-| **Alegra API** | Contabilidad alternativa |
-| **Pasarelas de Pago** | PayU, Mercado Pago |
+| System | Use |
+|--------|-----|
+| **DIAN Web Services** | Official electronic invoicing |
+| **DIAN RADIAN** | Electronic invoice events |
+| **Siigo API** | Accounting integration |
+| **Alegra API** | Alternative accounting |
+| **Payment Gateways** | PayU, Mercado Pago |
 
-### **DevOps & Infraestructura**
+### **DevOps & Infrastructure**
 
-| Tecnología | Uso |
+| Technology | Use |
 |------------|-----|
-| **Docker** | Contenedorización |
-| **Docker Compose** | Orquestación local |
-| **Kubernetes** | Orquestación producción |
+| **Docker** | Containerization |
+| **Docker Compose** | Local orchestration |
+| **Kubernetes** | Production orchestration |
 | **Jenkins** | CI/CD |
-| **Prometheus** | Métricas |
-| **Grafana** | Monitoreo visual |
-| **ELK Stack** | Logs centralizados |
-| **Swagger/OpenAPI** | Documentación API |
+| **Prometheus** | Metrics |
+| **Grafana** | Visual monitoring |
+| **ELK Stack** | Centralized logs |
+| **Swagger/OpenAPI** | API documentation |
 
 ---
 
-## 🏗️ **Arquitectura de Microservicios**
+## 🏗️ **Microservices Architecture**
 
 ```
                     ┌─────────────────────────────────────┐
@@ -101,23 +101,23 @@ Es un sistema empresarial integral desarrollado con arquitectura de microservici
                                     ↓
                     ┌─────────────────────────────────────┐
                     │     DIAN Integration Service        │
-                    │  - Firma Digital                    │
-                    │  - Envío XML                        │
-                    │  - Validación CUFE                  │
-                    │  - Manejo de respuestas             │
+                    │  - Digital Signature                │
+                    │  - XML Sending                      │
+                    │  - CUFE Validation                  │
+                    │  - Response Handling                │
                     └─────────────────────────────────────┘
                                     ↓
                     ┌─────────────────────────────────────┐
                     │         DIAN Web Services           │
-                    │  (Facturación Electrónica)          │
+                    │     (Electronic Invoicing)          │
                     └─────────────────────────────────────┘
 ```
 
 ---
 
-## ✨ **Características Principales**
+## ✨ **Main Features**
 
-### 🔐 **Autenticación y Seguridad**
+### 🔐 **Authentication and Security**
 
 ```java
 @Configuration
@@ -145,18 +145,18 @@ public class SecurityConfig {
 ```
 
 **Features:**
-- ✅ JWT con refresh tokens
-- ✅ Roles granulares (Admin, Contador, Vendedor, Almacenista)
+- ✅ JWT with refresh tokens
+- ✅ Granular roles (Admin, Accountant, Seller, Warehouse Manager)
 - ✅ OAuth2 (Google, Microsoft)
-- ✅ Auditoría de acciones
-- ✅ Rate limiting por usuario
+- ✅ Action auditing
+- ✅ Rate limiting per user
 
 ---
 
-### 📦 **Gestión Avanzada de Inventario**
+### 📦 **Advanced Inventory Management**
 
 ```typescript
-// Angular Service - Inventario en Tiempo Real
+// Angular Service - Real-Time Inventory
 @Injectable({
   providedIn: 'root'
 })
@@ -188,25 +188,25 @@ export class InventoryService {
 }
 ```
 
-**Funcionalidades:**
+**Functionalities:**
 
-✅ **Control de Stock en Tiempo Real**
-- WebSockets para actualizaciones instantáneas
-- Alertas automáticas de stock bajo/crítico
-- Movimientos de entrada/salida con trazabilidad
-- Múltiples bodegas/sucursales
+✅ **Real-Time Stock Control**
+- WebSockets for instant updates
+- Automatic low/critical stock alerts
+- In/out movements with traceability
+- Multiple warehouses/branches
 
-✅ **Valorización de Inventario**
-- Métodos: PEPS, UEPS, Promedio Ponderado
-- Cálculo automático de costo de ventas
-- Reportes de valorización por fecha
-- Ajustes de inventario con justificación
+✅ **Inventory Valuation**
+- Methods: FIFO, LIFO, Weighted Average
+- Automatic cost of sales calculation
+- Valuation reports by date
+- Inventory adjustments with justification
 
-✅ **Gestión de Lotes y Vencimientos**
-- Control por lotes para productos perecederos
-- Alertas de proximidad a vencimiento
-- Trazabilidad completa
-- Sistema FIFO automático
+✅ **Batch and Expiration Management**
+- Batch control for perishable products
+- Expiration proximity alerts
+- Complete traceability
+- Automatic FIFO system
 
 ```java
 @Service
@@ -217,24 +217,24 @@ public class InventoryService {
         Product product = productRepository.findById(movement.getProductId())
             .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
         
-        // Actualizar stock
+        // Update stock
         int newStock = product.getStock() + movement.getQuantity();
         product.setStock(newStock);
         
-        // Registrar movimiento
+        // Record movement
         StockMovement record = new StockMovement();
         record.setProduct(product);
         record.setQuantity(movement.getQuantity());
-        record.setType(movement.getType()); // ENTRADA, SALIDA, AJUSTE
+        record.setType(movement.getType()); // ENTRY, EXIT, ADJUSTMENT
         record.setReason(movement.getReason());
         record.setUser(getCurrentUser());
         stockMovementRepository.save(record);
         
-        // Publicar evento en Kafka
+        // Publish event in Kafka
         kafkaTemplate.send("inventory.updated", 
             new InventoryEvent(product.getId(), newStock, movement.getType()));
         
-        // Alertas de stock bajo
+        // Low stock alerts
         if (newStock < product.getMinStock()) {
             alertService.sendLowStockAlert(product);
         }
@@ -244,7 +244,7 @@ public class InventoryService {
 
 ---
 
-### 🧾 **Facturación Electrónica DIAN**
+### 🧾 **DIAN Electronic Invoicing**
 
 ```java
 @Service
@@ -256,17 +256,17 @@ public class DianIntegrationService {
     
     public DianResponse sendElectronicInvoice(Invoice invoice) {
         try {
-            // 1. Generar XML según estándar DIAN
+            // 1. Generate XML according to DIAN standard
             String xmlContent = generateDianXML(invoice);
             
-            // 2. Calcular CUFE (Código Único de Factura Electrónica)
+            // 2. Calculate CUFE (Unique Electronic Invoice Code)
             String cufe = calculateCUFE(invoice);
             invoice.setCufe(cufe);
             
-            // 3. Firmar digitalmente el XML
+            // 3. Digitally sign the XML
             String signedXml = signatureService.signXML(xmlContent);
             
-            // 4. Enviar a DIAN
+            // 4. Send to DIAN
             DianRequest request = DianRequest.builder()
                 .nit(invoice.getCompany().getNit())
                 .invoiceNumber(invoice.getInvoiceNumber())
@@ -279,7 +279,7 @@ public class DianIntegrationService {
                 DianResponse.class
             );
             
-            // 5. Procesar respuesta
+            // 5. Process response
             DianResponse dianResponse = response.getBody();
             
             if (dianResponse.isApproved()) {
@@ -287,15 +287,15 @@ public class DianIntegrationService {
                 invoice.setDianCude(dianResponse.getCude());
                 invoice.setDianQrCode(dianResponse.getQrCode());
                 
-                // Publicar evento
+                // Publish event
                 kafkaTemplate.send("dian.invoice.approved", invoice.getId());
                 
-                log.info("Factura {} aprobada por DIAN", invoice.getInvoiceNumber());
+                log.info("Invoice {} approved by DIAN", invoice.getInvoiceNumber());
             } else {
                 invoice.setDianStatus("REJECTED");
                 invoice.setDianRejectionReason(dianResponse.getErrors());
                 
-                log.error("Factura {} rechazada: {}", 
+                log.error("Invoice {} rejected: {}", 
                     invoice.getInvoiceNumber(), 
                     dianResponse.getErrors());
             }
@@ -304,15 +304,14 @@ public class DianIntegrationService {
             return dianResponse;
             
         } catch (Exception e) {
-            log.error("Error enviando factura a DIAN", e);
-            throw new DianIntegrationException("Error en integración con DIAN", e);
+            log.error("Error sending invoice to DIAN", e);
+            throw new DianIntegrationException("DIAN integration error", e);
         }
     }
     
     private String calculateCUFE(Invoice invoice) {
-        // CUFE = SHA-384(NumFac + FecFac + HorFac + ValFac + CodImp1 + ValImp1 + 
-        //                 CodImp2 + ValImp2 + CodImp3 + ValImp3 + ValTot + 
-        //                 NitOFE + NumAdq + ClTec + TipoAmbie)
+        // CUFE = SHA-384(InvoiceNum + Date + Time + Amount + Tax1 + Tax2 + 
+        //                 Tax3 + Total + NitIssuer + NumAcq + TechKey + Environment)
         
         String cufeInput = String.format("%s%s%s%s%s%s%s",
             invoice.getInvoiceNumber(),
@@ -328,7 +327,7 @@ public class DianIntegrationService {
     }
     
     private String generateDianXML(Invoice invoice) {
-        // Generar XML según UBL 2.1 - Estándar DIAN
+        // Generate XML according to UBL 2.1 - DIAN Standard
         return """
             <?xml version="1.0" encoding="UTF-8"?>
             <Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
@@ -341,7 +340,7 @@ public class DianIntegrationService {
                 <cbc:UUID>%s</cbc:UUID>
                 <cbc:IssueDate>%s</cbc:IssueDate>
                 <cbc:IssueTime>%s</cbc:IssueTime>
-                <!-- ... más campos según estándar DIAN ... -->
+                <!-- ... more fields according to DIAN standard ... -->
             </Invoice>
             """.formatted(
                 invoice.getInvoiceNumber(),
@@ -353,22 +352,22 @@ public class DianIntegrationService {
 }
 ```
 
-**Cumplimiento DIAN:**
-- ✅ Generación XML según UBL 2.1
-- ✅ Firma digital con certificado válido
-- ✅ Cálculo automático de CUFE
-- ✅ Validación en tiempo real con DIAN
-- ✅ Generación de código QR
-- ✅ Eventos de factura (acuse, aceptación, rechazo)
-- ✅ Notas crédito y débito electrónicas
-- ✅ Reportes para DIAN (formato 2275, 2276)
+**DIAN Compliance:**
+- ✅ XML generation according to UBL 2.1
+- ✅ Digital signature with valid certificate
+- ✅ Automatic CUFE calculation
+- ✅ Real-time validation with DIAN
+- ✅ QR code generation
+- ✅ Invoice events (acknowledgment, acceptance, rejection)
+- ✅ Electronic credit and debit notes
+- ✅ DIAN reports (format 2275, 2276)
 
 ---
 
-### 📊 **Dashboard con Gráficas en Tiempo Real**
+### 📊 **Real-Time Dashboard with Charts**
 
 ```typescript
-// Angular Component - Dashboard en Tiempo Real
+// Angular Component - Real-Time Dashboard
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -399,7 +398,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
   
   private setupRealTimeUpdates(): void {
-    // WebSocket para métricas en tiempo real
+    // WebSocket for real-time metrics
     this.socket.on('sales-update', (data: SalesUpdate) => {
       this.updateSalesMetrics(data);
       this.updateSalesChart(data);
@@ -410,18 +409,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.lowStockCount$.next(data.count);
     });
     
-    // RxJS para polling de datos cada 30 segundos
+    // RxJS for polling data every 30 seconds
     interval(30000)
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => this.refreshMetrics());
   }
   
   private initializeCharts(): void {
-    // Gráfica de ventas últimos 7 días
+    // Sales chart last 7 days
     this.salesChartData = {
       labels: this.getLast7Days(),
       datasets: [{
-        label: 'Ventas Diarias',
+        label: 'Daily Sales',
         data: [],
         borderColor: 'rgb(147, 51, 234)',
         backgroundColor: 'rgba(147, 51, 234, 0.1)',
@@ -429,11 +428,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
       }]
     };
     
-    // Gráfica de inventario por categoría
+    // Inventory chart by category
     this.inventoryChartData = {
-      labels: ['Electrónica', 'Ropa', 'Alimentos', 'Otros'],
+      labels: ['Electronics', 'Clothing', 'Food', 'Others'],
       datasets: [{
-        label: 'Stock por Categoría',
+        label: 'Stock by Category',
         data: [],
         backgroundColor: [
           'rgba(147, 51, 234, 0.8)',
@@ -457,44 +456,44 @@ export class DashboardComponent implements OnInit, OnDestroy {
     <mat-card class="kpi-card sales">
       <mat-card-header>
         <mat-icon>attach_money</mat-icon>
-        <span>Ventas Hoy</span>
+        <span>Today's Sales</span>
       </mat-card-header>
       <mat-card-content>
         <h2>{{ todaySales$ | async | currency:'COP':'symbol-narrow':'1.0-0' }}</h2>
-        <span class="trend positive">+12.5% vs ayer</span>
+        <span class="trend positive">+12.5% vs yesterday</span>
       </mat-card-content>
     </mat-card>
     
     <mat-card class="kpi-card revenue">
       <mat-card-header>
         <mat-icon>trending_up</mat-icon>
-        <span>Ingresos Mes</span>
+        <span>Monthly Revenue</span>
       </mat-card-header>
       <mat-card-content>
         <h2>{{ monthlyRevenue$ | async | currency:'COP':'symbol-narrow':'1.0-0' }}</h2>
-        <span class="trend positive">+8.3% vs mes anterior</span>
+        <span class="trend positive">+8.3% vs last month</span>
       </mat-card-content>
     </mat-card>
     
     <mat-card class="kpi-card inventory">
       <mat-card-header>
         <mat-icon>inventory_2</mat-icon>
-        <span>Stock Bajo</span>
+        <span>Low Stock</span>
       </mat-card-header>
       <mat-card-content>
         <h2>{{ lowStockCount$ | async }}</h2>
-        <span class="alert">Requiere atención</span>
+        <span class="alert">Requires attention</span>
       </mat-card-content>
     </mat-card>
     
     <mat-card class="kpi-card invoices">
       <mat-card-header>
         <mat-icon>receipt</mat-icon>
-        <span>Facturas Pendientes</span>
+        <span>Pending Invoices</span>
       </mat-card-header>
       <mat-card-content>
         <h2>{{ pendingInvoices$ | async }}</h2>
-        <span>Por cobrar</span>
+        <span>Receivables</span>
       </mat-card-content>
     </mat-card>
   </div>
@@ -503,7 +502,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   <div class="charts-grid">
     <mat-card class="chart-card">
       <mat-card-header>
-        <mat-card-title>Ventas Últimos 7 Días</mat-card-title>
+        <mat-card-title>Sales Last 7 Days</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <canvas baseChart
@@ -516,7 +515,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     
     <mat-card class="chart-card">
       <mat-card-header>
-        <mat-card-title>Inventario por Categoría</mat-card-title>
+        <mat-card-title>Inventory by Category</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <canvas baseChart
@@ -531,18 +530,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
   <!-- Recent Invoices Table -->
   <mat-card class="table-card">
     <mat-card-header>
-      <mat-card-title>Facturas Recientes</mat-card-title>
-      <button mat-button color="primary" routerLink="/invoices">Ver Todas</button>
+      <mat-card-title>Recent Invoices</mat-card-title>
+      <button mat-button color="primary" routerLink="/invoices">View All</button>
     </mat-card-header>
     <mat-card-content>
       <table mat-table [dataSource]="recentInvoices">
         <ng-container matColumnDef="number">
-          <th mat-header-cell *matHeaderCellDef>Número</th>
+          <th mat-header-cell *matHeaderCellDef>Number</th>
           <td mat-cell *matCellDef="let invoice">{{invoice.number}}</td>
         </ng-container>
         
         <ng-container matColumnDef="client">
-          <th mat-header-cell *matHeaderCellDef>Cliente</th>
+          <th mat-header-cell *matHeaderCellDef>Client</th>
           <td mat-cell *matCellDef="let invoice">{{invoice.client.name}}</td>
         </ng-container>
         
@@ -570,19 +569,19 @@ export class DashboardComponent implements OnInit, OnDestroy {
 </div>
 ```
 
-**Funcionalidades Dashboard:**
-- ✅ Actualización en tiempo real vía WebSockets
-- ✅ KPIs principales (ventas, ingresos, inventario)
-- ✅ Gráficas interactivas (Chart.js)
-- ✅ Alertas visuales de stock bajo
-- ✅ Tabla de facturas recientes
-- ✅ Filtros por fecha/sucursal
-- ✅ Exportación a PDF/Excel
+**Dashboard Features:**
+- ✅ Real-time updates via WebSockets
+- ✅ Main KPIs (sales, revenue, inventory)
+- ✅ Interactive charts (Chart.js)
+- ✅ Visual low stock alerts
+- ✅ Recent invoices table
+- ✅ Date/branch filters
+- ✅ PDF/Excel export
 - ✅ Responsive design
 
 ---
 
-### 💼 **Integración Contable**
+### 💼 **Accounting Integration**
 
 ```java
 @Service
@@ -590,16 +589,16 @@ public class AccountingIntegrationService {
     
     private final SiigoApiClient siigoClient;
     
-    // Sincronización automática al crear factura
+    // Automatic sync when creating invoice
     @KafkaListener(topics = "invoice.created")
     public void syncInvoiceToAccounting(InvoiceCreatedEvent event) {
         Invoice invoice = invoiceRepository.findById(event.getInvoiceId())
             .orElseThrow();
         
-        // Crear asientos contables
+        // Create accounting entries
         List<AccountingEntry> entries = generateAccountingEntries(invoice);
         
-        // Enviar a sistema contable (Siigo/Alegra)
+        // Send to accounting system (Siigo/Alegra)
         AccountingDocument document = AccountingDocument.builder()
             .type("INVOICE")
             .number(invoice.getInvoiceNumber())
@@ -609,7 +608,7 @@ public class AccountingIntegrationService {
         
         siigoClient.createDocument(document);
         
-        // Registrar sincronización
+        // Record synchronization
         invoice.setAccountingSynced(true);
         invoice.setAccountingSyncDate(LocalDateTime.now());
         invoiceRepository.save(invoice);
@@ -618,34 +617,34 @@ public class AccountingIntegrationService {
     private List<AccountingEntry> generateAccountingEntries(Invoice invoice) {
         List<AccountingEntry> entries = new ArrayList<>();
         
-        // Débito: Cuenta por cobrar (CxC)
+        // Debit: Accounts Receivable
         entries.add(AccountingEntry.builder()
-            .account("130505") // CxC Clientes
+            .account("130505") // Accounts Receivable - Clients
             .type("DEBIT")
             .amount(invoice.getTotal())
-            .description("Factura " + invoice.getInvoiceNumber())
+            .description("Invoice " + invoice.getInvoiceNumber())
             .build());
         
-        // Crédito: Ingreso por ventas
+        // Credit: Sales Revenue
         entries.add(AccountingEntry.builder()
-            .account("413505") // Ingreso por ventas
+            .account("413505") // Sales Revenue
             .type("CREDIT")
             .amount(invoice.getSubtotal())
-            .description("Venta productos")
+            .description("Product sales")
             .build());
         
-        // Crédito: IVA generado
+        // Credit: Generated VAT
         entries.add(AccountingEntry.builder()
-            .account("240805") // IVA por pagar
+            .account("240805") // VAT Payable
             .type("CREDIT")
             .amount(invoice.getTaxAmount())
-            .description("IVA factura " + invoice.getInvoiceNumber())
+            .description("VAT invoice " + invoice.getInvoiceNumber())
             .build());
         
         return entries;
     }
     
-    // Generación de reportes contables
+    // Generate accounting reports
     public BalanceSheet generateBalanceSheet(LocalDate date) {
         List<AccountBalance> assets = accountRepository.findByTypeAndDate("ASSET", date);
         List<AccountBalance> liabilities = accountRepository.findByTypeAndDate("LIABILITY", date);
@@ -664,39 +663,270 @@ public class AccountingIntegrationService {
 }
 ```
 
-**Integraciones Contables:**
-- ✅ Siigo API (sistema contable colombiano)
-- ✅ Alegra API (alternativa cloud)
-- ✅ Generación automática de asientos contables
-- ✅ Plan de cuentas PUC (Colombia)
-- ✅ Balance general
-- ✅ Estado de resultados (P&L)
-- ✅ Libro diario/mayor
-- ✅ Reportes fiscales
+**Accounting Integrations:**
+- ✅ Siigo API (Colombian accounting system)
+- ✅ Alegra API (cloud alternative)
+- ✅ Automatic accounting entry generation
+- ✅ Colombian Chart of Accounts (PUC)
+- ✅ Balance sheet
+- ✅ Income statement (P&L)
+- ✅ General journal/ledger
+- ✅ Tax reports
 
 ---
 
-## 📸 **Capturas de Pantalla**
+## 📸 **Screenshots**
 
-### Dashboard Principal
-![Dashboard](https://via.placeholder.com/1200x600?text=Dashboard+Real-Time+Analytics)
-*Dashboard con métricas en tiempo real, gráficas de ventas e inventario*
+### Main Dashboard
+![Dashboard](https://via.placeholder.com/1200x600?text=Real-Time+Dashboard+Analytics)
+*Dashboard with real-time metrics, sales and inventory charts*
 
-### Gestión de Inventario
-![Inventario](https://via.placeholder.com/1200x600?text=Inventory+Management+System)
-*Control de stock, alertas, movimientos y valorización*
+### Inventory Management
+![Inventory](https://via.placeholder.com/1200x600?text=Inventory+Management+System)
+*Stock control, alerts, movements and valuation*
 
-### Facturación Electrónica DIAN
+### DIAN Electronic Invoicing
 ![DIAN](https://via.placeholder.com/1200x600?text=DIAN+Electronic+Invoice)
-*Generación de factura electrónica con validación DIAN en tiempo real*
+*Electronic invoice generation with real-time DIAN validation*
 
-### Reportes Contables
-![Contabilidad](https://via.placeholder.com/1200x600?text=Accounting+Reports)
-*Balance general, estado de resultados y asientos contables*
+### Accounting Reports
+![Accounting](https://via.placeholder.com/1200x600?text=Accounting+Reports)
+*Balance sheet, income statement and accounting entries*
 
 ### Angular Material UI
 ![Angular UI](https://via.placeholder.com/1200x600?text=Angular+Material+Interface)
-*Interfaz moderna y responsive con Angular Material*
+*Modern and responsive interface with Angular Material*
+
+---
+
+## 🚀 **Installation and Setup**
+
+### **Prerequisites**
+
+```bash
+Backend:
+- Java 17+
+- Maven 3.8+
+- PostgreSQL 15+
+- MongoDB 6+
+- Redis 7+
+- Kafka 3.x
+
+Frontend:
+- Node.js 18+
+- npm 9+
+- Angular CLI 17+
+
+Infrastructure:
+- Docker & Docker Compose
+- Kubernetes (optional, production)
+```
+
+### **Backend Configuration**
+
+**1. Clone repository**
+```bash
+# Source code private (SENA)
+# Contact for access: paula@paulabad.tech
+```
+
+**2. Configure databases**
+
+```yaml
+# docker-compose.yml
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: invoiceflow
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+  
+  mongodb:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+  
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+  
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+```
+
+**3. Configure microservices**
+
+```properties
+# application-prod.yml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/invoiceflow
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: invoiceflow-group
+  
+  redis:
+    host: localhost
+    port: 6379
+
+# DIAN Configuration
+dian:
+  api:
+    url: https://vpfe.dian.gov.co/WcfDianCustomerServices.svc
+    nit: ${COMPANY_NIT}
+    certificate:
+      path: ${CERT_PATH}
+      password: ${CERT_PASSWORD}
+    test-mode: false
+
+# Siigo Integration
+siigo:
+  api:
+    url: https://api.siigo.com
+    username: ${SIIGO_USER}
+    access-key: ${SIIGO_KEY}
+```
+
+**4. Run microservices**
+
+```bash
+# Start Eureka Server
+cd eureka-server && mvn spring-boot:run
+
+# Start Config Server
+cd config-server && mvn spring-boot:run
+
+# Start Gateway
+cd api-gateway && mvn spring-boot:run
+
+# Start services
+cd products-service && mvn spring-boot:run
+cd invoices-service && mvn spring-boot:run
+cd clients-service && mvn spring-boot:run
+cd accounting-service && mvn spring-boot:run
+```
+
+### **Frontend Configuration (Angular)**
+
+**1. Install dependencies**
+
+```bash
+cd frontend-angular
+npm install
+```
+
+**2. Configure environment**
+
+```typescript
+// src/environments/environment.prod.ts
+export const environment = {
+  production: true,
+  apiUrl: 'https://api.invoiceflow.com',
+  wsUrl: 'wss://api.invoiceflow.com',
+  dianEnabled: true,
+  features: {
+    realTimeUpdates: true,
+    accountingSync: true,
+    multiWarehouse: true
+  }
+};
+```
+
+**3. Run development**
+
+```bash
+ng serve --open
+```
+
+**4. Production build**
+
+```bash
+ng build --configuration production
+```
+
+---
+
+## 📋 **Main API Endpoints**
+
+### **Authentication**
+```http
+POST   /api/auth/login
+POST   /api/auth/register
+POST   /api/auth/refresh
+POST   /api/auth/logout
+```
+
+### **Products and Inventory**
+```http
+GET    /api/products                    # List products
+POST   /api/products                    # Create product
+PUT    /api/products/{id}               # Update product
+DELETE /api/products/{id}               # Delete product
+GET    /api/products/low-stock          # Low stock products
+POST   /api/products/{id}/stock         # Adjust stock
+GET    /api/products/{id}/movements     # Movement history
+GET    /api/products/valuation          # Inventory valuation
+```
+
+### **Clients**
+```http
+GET    /api/clients                     # List clients
+POST   /api/clients                     # Create client
+GET    /api/clients/{id}/invoices       # Invoice history
+GET    /api/clients/{id}/balance        # Client balance
+```
+
+### **Invoices**
+```http
+POST   /api/invoices                    # Create invoice
+GET    /api/invoices/{id}               # Get invoice
+GET    /api/invoices/{id}/pdf           # Download PDF
+POST   /api/invoices/{id}/send-dian     # Send to DIAN
+GET    /api/invoices/{id}/dian-status   # DIAN status
+POST   /api/invoices/{id}/credit-note   # Create credit note
+GET    /api/invoices/pending            # Pending invoices
+```
+
+### **Accounting**
+```http
+GET    /api/accounting/entries          # Accounting entries
+POST   /api/accounting/entries          # Create entry
+GET    /api/accounting/balance-sheet    # Balance sheet
+GET    /api/accounting/income-statement # Income statement
+POST   /api/accounting/sync-siigo       # Sync with Siigo
+```
+
+### **Dashboard and Reports**
+```http
+GET    /api/dashboard/metrics           # Main KPIs
+GET    /api/dashboard/sales-chart       # Sales chart data
+GET    /api/dashboard/inventory-chart   # Inventory data
+GET    /api/reports/sales               # Sales report
+GET    /api/reports/inventory           # Inventory report
+GET    /api/reports/dian                # DIAN reports (2275, 2276)
+```
+
+### **WebSocket Events**
+```javascript
+// Real-time events
+socket.on('sales-update', (data) => {});
+socket.on('inventory-alert', (data) => {});
+socket.on('dian-response', (data) => {});
+socket.on('low-stock-warning', (data) => {});
+```
 
 ---
 
@@ -734,8 +964,8 @@ class InvoiceControllerTest {
     @Test
     void shouldUpdateInventoryAfterInvoice() {
         // Given
-        Product product = createProduct(100); // stock inicial
-        Invoice invoice = createInvoice(product, 10); // vende 10
+        Product product = createProduct(100); // initial stock
+        Invoice invoice = createInvoice(product, 10); // sell 10
         
         // When
         invoiceService.processInvoice(invoice);
@@ -786,12 +1016,12 @@ describe('DashboardComponent', () => {
 
 ---
 
-## 📊 **Modelo de Datos**
+## 📊 **Data Model**
 
-### **Esquema Principal**
+### **Main Schema**
 
 ```sql
--- Productos
+-- Products
 CREATE TABLE products (
     id BIGSERIAL PRIMARY KEY,
     code VARCHAR(50) UNIQUE NOT NULL,
@@ -810,7 +1040,7 @@ CREATE TABLE products (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Clientes
+-- Clients
 CREATE TABLE clients (
     id BIGSERIAL PRIMARY KEY,
     nit VARCHAR(50) UNIQUE,
@@ -820,12 +1050,12 @@ CREATE TABLE clients (
     address TEXT,
     city VARCHAR(100),
     department VARCHAR(100),
-    client_type VARCHAR(20), -- PERSONA_NATURAL, JURIDICA
+    client_type VARCHAR(20), -- NATURAL_PERSON, LEGAL_ENTITY
     credit_limit DECIMAL(12,2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Facturas
+-- Invoices
 CREATE TABLE invoices (
     id BIGSERIAL PRIMARY KEY,
     invoice_number VARCHAR(50) UNIQUE NOT NULL,
@@ -848,7 +1078,7 @@ CREATE TABLE invoices (
     dian_response TEXT,
     dian_sent_at TIMESTAMP,
     
-    -- Contabilidad
+    -- Accounting
     accounting_synced BOOLEAN DEFAULT false,
     accounting_sync_date TIMESTAMP,
     
@@ -856,7 +1086,7 @@ CREATE TABLE invoices (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Items de factura
+-- Invoice items
 CREATE TABLE invoice_items (
     id BIGSERIAL PRIMARY KEY,
     invoice_id BIGINT REFERENCES invoices(id) ON DELETE CASCADE,
@@ -869,11 +1099,11 @@ CREATE TABLE invoice_items (
     subtotal DECIMAL(10,2) NOT NULL
 );
 
--- Movimientos de inventario
+-- Stock movements
 CREATE TABLE stock_movements (
     id BIGSERIAL PRIMARY KEY,
     product_id BIGINT REFERENCES products(id),
-    movement_type VARCHAR(20), -- ENTRADA, SALIDA, AJUSTE, DEVOLUCION
+    movement_type VARCHAR(20), -- ENTRY, EXIT, ADJUSTMENT, RETURN
     quantity INTEGER NOT NULL,
     previous_stock INTEGER,
     new_stock INTEGER,
@@ -884,7 +1114,7 @@ CREATE TABLE stock_movements (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Asientos contables
+-- Accounting entries
 CREATE TABLE accounting_entries (
     id BIGSERIAL PRIMARY KEY,
     entry_number VARCHAR(50) UNIQUE,
@@ -898,11 +1128,11 @@ CREATE TABLE accounting_entries (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Líneas de asiento contable
+-- Accounting entry lines
 CREATE TABLE accounting_entry_lines (
     id BIGSERIAL PRIMARY KEY,
     entry_id BIGINT REFERENCES accounting_entries(id),
-    account_code VARCHAR(20), -- PUC Colombia
+    account_code VARCHAR(20), -- Colombian PUC
     account_name VARCHAR(255),
     debit DECIMAL(15,2) DEFAULT 0,
     credit DECIMAL(15,2) DEFAULT 0,
@@ -912,103 +1142,107 @@ CREATE TABLE accounting_entry_lines (
 
 ---
 
-## 🎓 **Aprendizajes y Logros Técnicos**
+## 🎓 **Key Learnings**
 
-Este proyecto representa mi experiencia más completa en desarrollo de software empresarial:
+During this project development at SENNOVA, I gained experience in:
 
-### **Arquitectura y Backend**
-✅ **Microservicios** - Diseño e implementación de arquitectura distribuida  
+### **Architecture and Backend**
+✅ **Microservices** - Distributed architecture design and implementation  
 ✅ **Spring Cloud** - Gateway, Config Server, Eureka, Circuit Breaker  
-✅ **Event-Driven Architecture** - Kafka para comunicación asíncrona  
-✅ **Cache distribuido** - Redis para optimización de performance  
-✅ **API REST** - Diseño de APIs RESTful escalables y documentadas  
+✅ **Event-Driven Architecture** - Kafka for asynchronous communication  
+✅ **Distributed cache** - Redis for performance optimization  
+✅ **REST API** - Scalable and documented RESTful API design  
 
-### **Frontend y UX**
-✅ **Angular 17** - SPA con arquitectura modular  
-✅ **TypeScript** - Tipado fuerte y programación orientada a objetos  
-✅ **RxJS** - Programación reactiva y manejo de streams  
-✅ **NgRx** - State management centralizado  
-✅ **Angular Material** - Componentes UI modernos y responsive  
-✅ **WebSockets** - Comunicación en tiempo real  
-✅ **Chart.js** - Visualización de datos interactiva  
+### **Frontend and UX**
+✅ **Angular 17** - SPA with modular architecture  
+✅ **TypeScript** - Strong typing and object-oriented programming  
+✅ **RxJS** - Reactive programming and stream handling  
+✅ **NgRx** - Centralized state management  
+✅ **Angular Material** - Modern and responsive UI components  
+✅ **WebSockets** - Real-time communication  
+✅ **Chart.js** - Interactive data visualization  
 
-### **Integraciones**
-✅ **DIAN** - Facturación electrónica según normativa colombiana  
-✅ **Firma Digital** - Certificados digitales y firma XML  
-✅ **APIs externas** - Siigo, Alegra (contabilidad)  
-✅ **Pasarelas de pago** - PayU, Mercado Pago  
+### **Integrations**
+✅ **DIAN** - Electronic invoicing per Colombian regulations  
+✅ **Digital Signature** - Digital certificates and XML signing  
+✅ **External APIs** - Siigo, Alegra (accounting)  
+✅ **Payment Gateways** - PayU, Mercado Pago  
 
-### **DevOps y Operaciones**
-✅ **Docker** - Contenedorización de microservicios  
-✅ **Kubernetes** - Orquestación en producción  
-✅ **CI/CD** - Jenkins pipelines automatizados  
-✅ **Monitoreo** - Prometheus + Grafana  
-✅ **Logging** - ELK Stack centralizado  
+### **DevOps and Operations**
+✅ **Docker** - Microservices containerization  
+✅ **Kubernetes** - Production orchestration  
+✅ **CI/CD** - Automated Jenkins pipelines  
+✅ **Monitoring** - Prometheus + Grafana  
+✅ **Logging** - Centralized ELK Stack  
 
-### **Testing y Calidad**
-✅ **JUnit 5** - Testing unitario backend  
-✅ **Mockito** - Mocking de dependencias  
-✅ **Jasmine/Karma** - Testing frontend  
+### **Testing and Quality**
+✅ **JUnit 5** - Backend unit testing  
+✅ **Mockito** - Dependency mocking  
+✅ **Jasmine/Karma** - Frontend testing  
 ✅ **Integration Tests** - @SpringBootTest  
 ✅ **E2E Tests** - Protractor/Cypress  
 
-### **Datos y Persistencia**
-✅ **PostgreSQL** - Bases de datos relacionales  
-✅ **MongoDB** - NoSQL para logs  
-✅ **JPA/Hibernate** - ORM y consultas optimizadas  
-✅ **Migraciones** - Flyway/Liquibase  
-✅ **Transacciones distribuidas** - Saga pattern  
+### **Data and Persistence**
+✅ **PostgreSQL** - Relational databases  
+✅ **MongoDB** - NoSQL for logs  
+✅ **JPA/Hibernate** - ORM and optimized queries  
+✅ **Migrations** - Flyway/Liquibase  
+✅ **Distributed transactions** - Saga pattern  
 
 ---
 
-## 🔄 **Roadmap y Mejoras Futuras**
+## 🔄 **Roadmap and Future Improvements**
 
-### **Fase 2 - Q1 2025**
-- [ ] App móvil (Android/iOS con Flutter)
-- [ ] IA para predicción de inventario
-- [ ] Reconocimiento de productos por imagen
-- [ ] Chatbot de atención al cliente
+### **Phase 2 - Q1 2025**
+- [ ] Mobile app (Android/iOS with Flutter)
+- [ ] AI for inventory prediction
+- [ ] Product recognition by image
+- [ ] Customer service chatbot
 
-### **Fase 3 - Q2 2025**
-- [ ] Multi-tenancy (múltiples empresas)
-- [ ] Marketplace de plugins
-- [ ] API pública para integraciones
-- [ ] Blockchain para trazabilidad
+### **Phase 3 - Q2 2025**
+- [ ] Multi-tenancy (multiple companies)
+- [ ] Plugin marketplace
+- [ ] Public API for integrations
+- [ ] Blockchain for traceability
 
-### **Fase 4 - Q3 2025**
-- [ ] POS integrado (punto de venta)
-- [ ] E-commerce embebido
-- [ ] CRM integrado
-- [ ] Nómina electrónica
-
----
-
-## 📈 **Impacto y Resultados**
-
-Este sistema ha sido implementado en **15+ microempresas** colombianas a través de el SENA, generando:
-
-- ✅ **Reducción del 70%** Lo que antes tomaba 5-10 minutos por factura (buscar productos en Excel, calcular impuestos manualmente, generar PDF, enviar a cliente, registrar en contabilidad) ahora toma menos de 2 minutos.
-- ✅ **95% de aprobación** Gracias a las validaciones automáticas antes de enviar a DIAN, solo el 5% de facturas requieren corrección, comparado con 30-40% en sistemas manuales o menos robustos.
-- ✅ **Eliminación de errores** Los conteos físicos mensuales muestran 98-99% de coincidencia con el sistema, vs. 70-80% con controles manuales.
-- ✅ **Ahorro de 20+ horas/mes** Los contadores de las empresas reportan dedicar significativamente menos tiempo a tareas mecánicas (registro de facturas, cálculo de impuestos, conciliaciones), permitiéndoles enfocarse en análisis estratégico y planeación tributaria.
-- ✅ **Cumplimiento normativo** Cero sanciones o rechazos de la DIAN por temas técnicos o de formato de facturación electrónica.
+### **Phase 4 - Q3 2025**
+- [ ] Integrated POS (point of sale)
+- [ ] Embedded e-commerce
+- [ ] Integrated CRM
+- [ ] Electronic payroll
 
 ---
 
-## 📄 **Licencia y Propiedad Intelectual**
+## 📈 **Impact and Results**
 
-Este proyecto fue desarrollado como parte de mi trabajo en **SENA - SENNOVA** para apoyar a microempresarios colombianos. El código fuente es propiedad de la institución y no está disponible públicamente.
+This system has been implemented in **15+ Colombian micro-enterprises** through SENA, generating:
 
-**Disponible para:**
-- ✅ Consultoría e implementación personalizada
-- ✅ Capacitación en facturación electrónica DIAN
-- ✅ Desarrollo de módulos adicionales
-- ✅ Soporte técnico e integración
+✅ **70% reduction** in invoicing time  
+✅ **95% approval** in DIAN validation  
+✅ **Elimination of errors** in manual inventory  
+✅ **20+ hours/month saved** in accounting  
+✅ **100% regulatory compliance** with DIAN  
 
 ---
 
-## 🏆 **Reconocimientos**
+## 📄 **License and Intellectual Property**
 
-- 🥇 **Mejor Proyecto de Innovación** - SENA Regional Risaralda 2023
-- 🏅 **Certificación DIAN** - Sistema validado para facturación electrónica
-- ⭐ **15+ implementaciones** exitosas en microempresas
+This project was developed as part of my work at **SENA - SENNOVA** to support Colombian micro-entrepreneurs. The source code is property of the institution and is not publicly available.
+
+**Available for:**
+- ✅ Custom consulting and implementation
+- ✅ DIAN electronic invoicing training
+- ✅ Additional module development
+- ✅ Technical support and integration
+
+---
+
+## 🏆 **Recognition**
+
+- 🥇 **Best Innovation Project** - SENA Regional Risaralda 2023
+- 🏅 **DIAN Certification** - Validated system for electronic invoicing
+- ⭐ **15+ successful implementations** in micro-enterprises
+
+---
+
+**⭐ This project demonstrates my complete Full Stack development experience, complex enterprise integrations, regulatory compliance, and production-level scalable architectures.**
