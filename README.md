@@ -1,14 +1,4 @@
-# 📊 **InvoiceFlow - Comprehensive Invoicing & Inventory System for SMEs**
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x200?text=InvoiceFlow+Enterprise+System" alt="InvoiceFlow Banner">
-</p>
-
-## 🎯 **Description**
-
 Comprehensive enterprise system developed with microservices architecture that unifies electronic invoicing management, inventory control, automated accounting, and real-time business analytics. Designed for Colombian SMEs requiring DIAN electronic invoicing compliance, rigorous inventory control, and automated accounting processes.
-
-This project represents my experience developing complex enterprise solutions at SENNOVA/SENA, integrating multiple systems (electronic invoicing, ERP, accounting) for micro-entrepreneurs and small businesses in Colombia.
 
 ---
 
