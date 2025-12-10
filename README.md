@@ -1218,11 +1218,11 @@ Este proyecto representa mi experiencia más completa en desarrollo de software 
 
 Este sistema ha sido implementado en **15+ microempresas** colombianas a través de el SENA, generando:
 
-✅ **Reducción del 70%** Lo que antes tomaba 5-10 minutos por factura (buscar productos en Excel, calcular impuestos manualmente, generar PDF, enviar a cliente, registrar en contabilidad) ahora toma menos de 2 minutos.
-✅ **95% de aprobación** Gracias a las validaciones automáticas antes de enviar a DIAN, solo el 5% de facturas requieren corrección, comparado con 30-40% en sistemas manuales o menos robustos.
-✅ **Eliminación de errores** Los conteos físicos mensuales muestran 98-99% de coincidencia con el sistema, vs. 70-80% con controles manuales.
-✅ **Ahorro de 20+ horas/mes** Los contadores de las empresas reportan dedicar significativamente menos tiempo a tareas mecánicas (registro de facturas, cálculo de impuestos, conciliaciones), permitiéndoles enfocarse en análisis estratégico y planeación tributaria.
-✅ **Cumplimiento normativo** Cero sanciones o rechazos de la DIAN por temas técnicos o de formato de facturación electrónica.
+- ✅ **Reducción del 70%** Lo que antes tomaba 5-10 minutos por factura (buscar productos en Excel, calcular impuestos manualmente, generar PDF, enviar a cliente, registrar en contabilidad) ahora toma menos de 2 minutos.
+- ✅ **95% de aprobación** Gracias a las validaciones automáticas antes de enviar a DIAN, solo el 5% de facturas requieren corrección, comparado con 30-40% en sistemas manuales o menos robustos.
+- ✅ **Eliminación de errores** Los conteos físicos mensuales muestran 98-99% de coincidencia con el sistema, vs. 70-80% con controles manuales.
+- ✅ **Ahorro de 20+ horas/mes** Los contadores de las empresas reportan dedicar significativamente menos tiempo a tareas mecánicas (registro de facturas, cálculo de impuestos, conciliaciones), permitiéndoles enfocarse en análisis estratégico y planeación tributaria.
+- ✅ **Cumplimiento normativo** Cero sanciones o rechazos de la DIAN por temas técnicos o de formato de facturación electrónica.
 
 ---
 
