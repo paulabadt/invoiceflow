@@ -1,18 +1,4 @@
-¡Perfecto! Vamos a actualizar el README para que refleje un proyecto **MUCHO MÁS ROBUSTO** con Angular, DIAN, dashboards en tiempo real e integración contable.
-
----
-
-# 📊 **InvoiceFlow - Sistema Integral de Facturación e Inventario para PYMES**
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x200?text=InvoiceFlow+Sistema+Empresarial" alt="InvoiceFlow Banner">
-</p>
-
-## 🎯 **Descripción**
-
 Sistema empresarial completo de facturación electrónica, gestión de inventario y contabilidad desarrollado con arquitectura de microservicios. Diseñado para PYMES colombianas que requieren cumplir con normativas DIAN, controlar inventarios en tiempo real y automatizar procesos contables.
-
-Este proyecto representa mi experiencia desarrollando soluciones empresariales complejas en SENNOVA/SENA, integrando múltiples sistemas (facturación electrónica, ERP, contabilidad) para microempresarios y pequeñas empresas en Colombia.
 
 ---
 
