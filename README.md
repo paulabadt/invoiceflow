@@ -994,19 +994,6 @@ This system has been implemented in **15+ Colombian micro-enterprises** through 
 
 ---
 
-## 📞 **Contact and Collaboration**
-
-**Paula Abad**  
-Full Stack Developer | Backend Java/Spring Boot | Frontend Angular  
-Electronic Invoicing Specialist & DIAN Integration
-
-- 💼 [LinkedIn](https://linkedin.com/in/your-profile)
-- 💻 [GitHub](https://github.com/paulabadt)
-- 🌐 [Portfolio](https://paulabad.tech)
-- 📧 paula@paulabad.tech
-
----
-
 ## 📄 **License and Intellectual Property**
 
 This project was developed as part of my work at **SENA - SENNOVA** to support Colombian micro-entrepreneurs. The source code is property of the institution and is not publicly available.
