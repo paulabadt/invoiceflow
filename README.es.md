@@ -681,7 +681,7 @@ public class AccountingIntegrationService {
 **Nota:** Las imágenes mostradas son simulaciones creadas con fines demostrativos. El proyecto InvoiceFlow fue desarrollado para el SENA (Servicio Nacional de Aprendización), quien posee los derechos de propiedad intelectual. Las capturas de pantalla no corresponden a la aplicación original y han sido recreadas para propósitos de portfolio sin comprometer información confidencial de la institución.
 
 ### Dashboard Principal
-![Dashboard](https://github.com/paulabadt/invoiceflow/blob/main/dashboard.jpg)
+![Dashboard](https://github.com/paulabadt/invoiceflow/blob/main/dashboard.gif)
 *Dashboard con métricas en tiempo real, gráficas de ventas e inventario*
 
 ### Gestión de Inventario
