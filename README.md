@@ -683,22 +683,22 @@ public class AccountingIntegrationService {
 ![Dashboard](https://github.com/paulabadt/invoiceflow/blob/main/dashboard.png)
 *Dashboard with real-time metrics, sales and inventory charts*
 
-![Dashboard1](https://github.com/paulabadt/invoiceflow/blob/main/dashboard1.png)
+![Dashboard1](https://github.com/paulabadt/invoiceflow/blob/main/dashboard.jpg)
 
 ### Inventory Management
-![Inventory](https://via.placeholder.com/1200x600?text=Inventory+Management+System)
+![Inventory](https://github.com/paulabadt/invoiceflow/blob/main/inventory.jpg)
 *Stock control, alerts, movements and valuation*
 
 ### DIAN Electronic Invoicing
-![DIAN](https://via.placeholder.com/1200x600?text=DIAN+Electronic+Invoice)
+![DIAN](https://github.com/paulabadt/invoiceflow/blob/main/dian.jpg)
 *Electronic invoice generation with real-time DIAN validation*
 
 ### Accounting Reports
-![Accounting](https://via.placeholder.com/1200x600?text=Accounting+Reports)
+![Accounting](https://github.com/paulabadt/invoiceflow/blob/main/accounting.jpg)
 *Balance sheet, income statement and accounting entries*
 
 ### Angular Material UI
-![Angular UI](https://via.placeholder.com/1200x600?text=Angular+Material+Interface)
+![Angular UI](https://github.com/paulabadt/invoiceflow/blob/main/angular-ui.jpg)
 *Modern and responsive interface with Angular Material*
 
 ---
