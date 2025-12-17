@@ -680,23 +680,23 @@ public class AccountingIntegrationService {
 **Note:** The images shown are simulations created for demonstration purposes. The InvoiceFlow project was developed for SENA (Servicio Nacional de Aprendizaje - National Learning Service), which owns the intellectual property rights. The screenshots do not correspond to the original application and have been recreated for portfolio purposes without compromising confidential information of the institution.
 
 ### Main Dashboard
-![Dashboard1](https://github.com/paulabadt/invoiceflow/blob/main/dashboard.gif)
+![Dashboard1](https://github.com/paulabadt/invoiceflow/raw/main/dashboard.jpg)
 *Dashboard with real-time metrics, sales and inventory charts*
 
 ### Inventory Management
-![Inventory](https://github.com/paulabadt/invoiceflow/blob/main/inventory.jpg)
+![Inventory](https://github.com/paulabadt/invoiceflow/raw/main/inventory.jpg)
 *Stock control, alerts, movements and valuation*
 
 ### DIAN Electronic Invoicing
-![DIAN](https://github.com/paulabadt/invoiceflow/blob/main/dian.jpg)
+![DIAN](https://github.com/paulabadt/invoiceflow/raw/main/dian.jpg)
 *Electronic invoice generation with real-time DIAN validation*
 
 ### Accounting Reports
-![Accounting](https://github.com/paulabadt/invoiceflow/blob/main/accounting.jpg)
+![Accounting](https://github.com/paulabadt/invoiceflow/raw/main/accounting.jpg)
 *Balance sheet, income statement and accounting entries*
 
 ### Angular Material UI
-![Angular UI](https://github.com/paulabadt/invoiceflow/blob/main/angular-ui.jpg)
+![Angular UI](https://github.com/paulabadt/invoiceflow/raw/main/angular-ui.jpg)
 *Modern and responsive interface with Angular Material*
 
 ---
