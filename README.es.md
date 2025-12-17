@@ -684,8 +684,6 @@ public class AccountingIntegrationService {
 ![Dashboard](https://github.com/paulabadt/invoiceflow/blob/main/dashboard.png)
 *Dashboard con métricas en tiempo real, gráficas de ventas e inventario*
 
-![Dashboard1](https://github.com/paulabadt/invoiceflow/blob/main/dashboard1.png)
-
 ### Gestión de Inventario
 ![Inventario](https://via.placeholder.com/1200x600?text=Inventory+Management+System)
 *Control de stock, alertas, movimientos y valorización*
